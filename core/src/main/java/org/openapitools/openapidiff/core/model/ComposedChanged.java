@@ -4,9 +4,12 @@ import java.util.List;
 import java.util.Objects;
 import javax.validation.constraints.NotNull;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 public interface ComposedChanged extends Changed {
 
   @NotNull
+  @JsonIgnore
   List<Changed> getChangedElements();
 
   @NotNull

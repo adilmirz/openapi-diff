@@ -14,7 +14,7 @@ public class ChangedOpenApi implements ComposedChanged {
   private List<Endpoint> newEndpoints;
   private List<Endpoint> missingEndpoints;
   private List<ChangedOperation> changedOperations;
-  private List<ChangedSchema> changedSchemas;
+  @JsonIgnore private List<ChangedSchema> changedSchemas;
   private ChangedExtensions changedExtensions;
 
   public List<Endpoint> getDeprecatedEndpoints() {
